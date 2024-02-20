@@ -30,7 +30,7 @@ def read_yaml(path_to_yaml:Path)->ConfigBox:
     
 
 @ensure_annotations
-def cretae_directories(path_to_directories:list, verbose=True):
+def create_directories(path_to_directories:list, verbose=True):
     """
     Create a list of directories
 
@@ -42,8 +42,7 @@ def cretae_directories(path_to_directories:list, verbose=True):
         os.makedirs(path, exist_ok=True)
         if verbose:
             logger.info(f"Created directory at: {path}")
-
-
+    
 @ensure_annotations
 def get_size(path: Path)->str:
     """
